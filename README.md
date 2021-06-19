@@ -13,7 +13,7 @@ Paso 2:
 Clonar el repositorio del proyecto con el siguiente comando
 
 ```
-git clone 
+git clone https://github.com/bryanAguilar001/chat-socket-server.git
 ```
 
 Paso 3:
