@@ -42,6 +42,17 @@ npm run start:dev
 - Creación de directorios públicos
 - Variables de entorno y scripts
 - Emitir y escuchar eventos
+- Api rest endpoints
+- MongoDB y MongoAtlas
+- Conectar Node con Mongo
+- Validaciones en Express
+- Crear usuarios de base de datos
+- Encriptar contraseñas
+- Servicios REST
+- Login
+- Registro
+- Json Web Tokens
+- Validar y renovar JWTs
 
 ## Características
 
@@ -51,15 +62,17 @@ npm run start:dev
 
 ## Librerías & Paquetes usados
 
-* `dotenv`: configuración de variables de entorno (puerto de conexión) 
+* `dotenv`: Librería para configurar variables globales
 * `express`: framework del backend
 * `socket.io`: implementación de sockets en el servidor
 * `uuid`: generador de identificadores únicos
 * `bcryptjs`: generador de tokens
-* `cors`: permite realizar peticiones http de manera segura
+* `cors`: Middleware para NodeJS para habilitar configuración CORS en el servidor
 * `express-validator`: validaciones de campos
 * `jsonwebtoken`: servicios de autenticación
 * `mongoose`: gestión de colecciones de datos en base de datos mongo
+* `morgan` : Middleware para NodeJS para impresión de solicitudes http
+* `debug` : Herramienta de depuración de código
 
 # Autor
 
