@@ -20,7 +20,6 @@ const registerUserController = async (req, res = response) => {
         }
 
         const user = new User(req.body);
-        
         // Encriptar contraseña
         const salt = bcrypt.genSaltSync();
         user.password  = bcrypt.hashSync(password, salt);
@@ -28,7 +27,7 @@ const registerUserController = async (req, res = response) => {
         await user.save();
 
         // Generate JWT
-        const token = await generateJWT( user.code );
+        const token = await generateJWT( user._id );
 
         res.json({
             ok: true,
