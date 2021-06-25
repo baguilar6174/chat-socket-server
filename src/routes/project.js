@@ -7,6 +7,8 @@ const { registerUserController } = require('../controllers/registerController');
 const { loginUserController } = require('../controllers/loginController');
 const { refreshTokenController } = require('../controllers/refreshTokenController');
 const { validateJWT } = require('../middlewares/validate_jwt');
+const { usersController } = require('../controllers/users');
+const { messagesController } = require('../controllers/messagesController');
 
 
 /**
@@ -35,5 +37,22 @@ router.post('/auth/signup', [
  */
 
  router.get('/auth/refreshToken', validateJWT, refreshTokenController );
+
+
+ /**
+ * path: /api/v1/users
+ */
+
+  router.get('/users', validateJWT, usersController );
+
+
+  
+ /**
+ * path: /api/v1/messages
+ */
+
+  router.get('/messages/:from', validateJWT, messagesController );
+
+
 
 module.exports = router; 

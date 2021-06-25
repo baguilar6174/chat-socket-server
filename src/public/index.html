@@ -20,13 +20,6 @@
             console.log('No communication with the server');
         });
 
-        // Emit event
-        socket.emit('message', { name: 'Bryan' });
-        // Listen event
-        socket.on('new-message', function (payload) {
-            console.log('Listen: ', payload);
-        });
-
     </script>
 </body>
 

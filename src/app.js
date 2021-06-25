@@ -30,11 +30,6 @@ app.use(express.json());
 // morgan config
 (app.get('env') !== 'production') && app.use(logger('dev'));
 
-// Node Server
-const server = require('http').createServer(app);
-module.exports.io = require('socket.io')(server);
-require('./sockets/socket');
-
 // public path
 const publicPath = path.resolve(__dirname, 'public');
 app.use(express.static(publicPath));
